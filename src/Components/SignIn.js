@@ -10,6 +10,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
+import History from './History';
+import  '../style.css';
+
 
 const styles = theme => ({
   main: {
@@ -54,7 +57,9 @@ function SignIn(props) {
   const { classes } = props;
 
   return (
-    <div>
+    <div id="bg">
+            <h1>.</h1>
+
     <main className={classes.main}>
       <CssBaseline />
       <Paper className={classes.paper}>
@@ -82,6 +87,9 @@ function SignIn(props) {
             fullWidth
             variant="contained"
             className={classes.submit}
+            onClick={ ()=>{
+              History.push("/Dashboard");
+            }}
           >
             Sign in
           </Button>
