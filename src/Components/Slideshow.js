@@ -2,9 +2,11 @@ import React from 'react';
 import { Fade } from 'react-slideshow-image';
  
 const fadeImages = [
-  'http://misf.org/wp-content/uploads/2017/12/example-slide-350-3.jpg',
-  'http://wowslider.com/sliders/demo-42/data1/images/lighthouse.jpg',
-  'http://wowslider.com/sliders/demo-6/data/images/greenmountain.jpg'
+    require('../images/slide1.jpg'),
+    require('../images/slide2.jpg'),
+    require('../images/slide3.jpg'),
+    
+  
 ];
  
 const fadeProperties = {

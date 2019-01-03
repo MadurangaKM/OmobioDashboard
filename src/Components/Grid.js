@@ -4,6 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Slideshow from "../Components/Slideshow.js"
+import Chart from './Chart';
+import Typography from '@material-ui/core/Typography';
+
 
 const styles = theme => ({
   root: {
@@ -16,6 +19,7 @@ const styles = theme => ({
     marginTop: 30,
     marginLeft: 20,
     marginRight: 20,
+  
   },
 });
 
@@ -33,7 +37,19 @@ function FullWidthGrid(props) {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}></Paper>
+          <Paper className={classes.paper}>
+          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+          Analytics
+            </Typography>
+            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+           
+            </Typography>
+            <Typography variant="subheading"  color="inherit" gutterBottom>
+            Your point status for last 6 months
+        </Typography>
+        <br/>
+          <Chart/>
+          </Paper>
         </Grid>
       </Grid>
     </div>
