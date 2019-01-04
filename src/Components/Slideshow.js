@@ -22,19 +22,19 @@ const Slideshow = () => {
     <Fade {...fadeProperties}>
       <div className="each-fade" >
         <div className="image-container" >
-          <img src={fadeImages[0]} />
+          <img src={fadeImages[0]}alt="slideone" />
         </div>
         
       </div>
       <div className="each-fade">
         <div className="image-container">
-          <img src={fadeImages[1]} />
+          <img src={fadeImages[1]} alt="slideone"/>
         </div>
         
       </div>
       <div className="each-fade">
         <div className="image-container">
-          <img src={fadeImages[2]} />
+          <img src={fadeImages[2]} alt="slideone"/>
         </div>
        
       </div>

@@ -64,7 +64,7 @@ function SignIn(props) {
       <CssBaseline />
       <Paper className={classes.paper}>
       <br></br>
-      <img src={"http://omobio.net/selfcarenew/images/logo.png"} style={{width: '180px', height: '60px'}} />
+      <img src={"http://omobio.net/selfcarenew/images/logo.png"} style={{width: '180px', height: '60px'}}alt="logo" />
         <Typography component="h6" variant="h6" >
       
         WELCOME
