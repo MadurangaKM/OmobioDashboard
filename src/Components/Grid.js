@@ -7,6 +7,9 @@ import Slideshow from "../Components/Slideshow.js"
 import Chart from './Chart';
 import Profile from './Profile';
 import Typography from '@material-ui/core/Typography';
+import TodoInput from "./TodoInput";
+import Task from "./Task";
+
 
 
 const styles = theme => ({
@@ -59,7 +62,19 @@ function FullWidthGrid(props) {
         <Profile/>
       
         </Grid>
-      
+        <Grid item xs={12} sm={6}>
+        <Typography variant="h5"  color="inherit" style={{color:"#424242",marginLeft:20,fontWeight:"bold",marginTop:20,}}>
+            Todo List
+        </Typography>
+<TodoInput/>
+        <Task/>
+        <Task/>
+        <Task/>
+        <Task/>
+
+        </Grid>
+ 
+
       </Grid>
     </div>
   );
