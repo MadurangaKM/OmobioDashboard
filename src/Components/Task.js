@@ -26,18 +26,19 @@ const styles = theme => ({
 
 });
 
-function Task(props) {
-  const { classes } = props;
+class Task extends React.Component{ 
 
+  render(props){
+    const { classes } = this.props;
 
   return (
     
-    <div className={classes.root}>
+    <div className={classes.root} onClick={this.props.deleteMehod}  >
 
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper}  >
          
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-          Task One
+         {this.props.text}
             </Typography>
 
           </Paper>
@@ -45,6 +46,7 @@ function Task(props) {
 
     </div>
   );
+}
 }
 Task.propTypes = {
   classes: PropTypes.object.isRequired,

@@ -26,7 +26,7 @@ const styles = theme => ({
       
       <div className={classes.root}>
        
-        <Fab color="secondary" aria-label="Add" className={classes.fab}>
+        <Fab color="secondary" aria-label="Add" className={classes.fab} onClick= {props.onClick}>
           <AddIcon />
         </Fab>
      

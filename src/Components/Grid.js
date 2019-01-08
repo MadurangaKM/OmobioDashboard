@@ -8,7 +8,7 @@ import Chart from './Chart';
 import Profile from './Profile';
 import Typography from '@material-ui/core/Typography';
 import TodoInput from "./TodoInput";
-import Task from "./Task";
+
 
 
 
@@ -67,10 +67,7 @@ function FullWidthGrid(props) {
             Todo List
         </Typography>
 <TodoInput/>
-        <Task/>
-        <Task/>
-        <Task/>
-        <Task/>
+      
 
         </Grid>
  
