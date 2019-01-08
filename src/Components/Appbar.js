@@ -125,6 +125,28 @@ class PrimarySearchAppBar extends React.Component {
   handleMobileMenuClose = () => {
     this.setState({ mobileMoreAnchorEl: null });
   };
+  mailUrlClick(){
+    const url = 'https://mail.omobio.net/#1'.replace('http://localhost:3000/','');;
+    window.open(url, '_blank');
+}
+jiraUrlClick(){
+  const url = 'http://support.omobio.net/secure/Dashboard.jspa'.replace('http://localhost:3000/','');;
+  window.open(url, '_blank');
+}
+slackUrlClick(){
+  const url = 'https://omobio.slack.com/'.replace('http://localhost:3000/','');;
+  window.open(url, '_blank');
+}
+
+hrUrlClick(){
+  const url = 'http://hrm.omobio.net'.replace('http://localhost:3000/','');;
+  window.open(url, '_blank');
+}
+
+valutUrlClick(){
+  const url = 'http://vault101.omobio.net/'.replace('http://localhost:3000/','');;
+  window.open(url, '_blank');
+}
 
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
@@ -203,18 +225,18 @@ class PrimarySearchAppBar extends React.Component {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-            <Button size="small" className={classes.margin}>
+            <Button size="small" className={classes.margin} onClick={ this.mailUrlClick}>
           Mail
         </Button>
-        <Button size="small" className={classes.margin}>
+        <Button size="small" className={classes.margin} onClick={ this.jiraUrlClick}>
           Jira
-        </Button> <Button size="small" className={classes.margin}>
+        </Button> <Button size="small" className={classes.margin} onClick={ this.slackUrlClick}>
           Slack
-        </Button> <Button size="small" className={classes.margin}>
+        </Button> <Button size="small" className={classes.margin} onClick={ this.hrUrlClick}>
           HR
         </Button> <Button size="small" className={classes.margin}>
           Finance
-        </Button> <Button size="small" className={classes.margin}>
+        </Button> <Button size="small" className={classes.margin} onClick={ this.valutUrlClick}>
           Valut
         </Button> 
               <IconButton color="inherit">
