@@ -111,72 +111,86 @@ function FullWidthGrid(props) {
             Your Leave Balance & Apply For Leave
           </Typography>
           <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper}
+             style={{
+              //background:"linear-gradient(to right bottom, #DA4453, #89216B)",
+              background:"linear-gradient(to right bottom, #642B73, #C6426E)"
+            }}>
               <Typography
                 variant="h3"
-                color="inherit"
-                style={{ color: "#424242" }}
+                color="#fff"
+                style={{ color: "#fff" }}
               >
                 6/7
               </Typography>
               <Typography
                 variant="subheading"
-                color="inherit"
-                style={{ color: "#424242" }}
+                color="#fff"
+                style={{ color: "#fff" }}
               >
                 Casual Leaves
               </Typography>
             </Paper>
           </Grid>
           <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} style={{
+              //background:"linear-gradient(to right bottom, #ff9966, #ff5e62)"
+              background:"linear-gradient(to right bottom, #DA4453, #89216B)",
+            }}>
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 1/7
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Medical Leaves
               </Typography>
             </Paper>
           </Grid>
           <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper}
+            style={{
+              //background:"linear-gradient(to right bottom, #642B73, #C6426E)"
+              background:"linear-gradient(to right bottom, #FF512F, #DD2476)"
+            }}>
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 3/7
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Working from home
               </Typography>
             </Paper>
           </Grid>
           <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper}
+            style={{
+              background:"linear-gradient(to right bottom, #FF5F6D, #FFC371)"
+            }}>
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 7/7
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Anual Leaves
               </Typography>
@@ -196,7 +210,11 @@ function FullWidthGrid(props) {
             Last Day Punch In & Out
           </Typography>
           <Grid item xs={7} sm={4}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper} 
+            style={{
+              background:"linear-gradient(to right bottom, rgb(255, 163, 166), #fff)"
+            }}>
+            
               <Typography
                 variant="h3"
                 color="inherit"
@@ -214,7 +232,10 @@ function FullWidthGrid(props) {
             </Paper>
           </Grid>
           <Grid item xs={7} sm={4}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper}
+            style={{
+              background:"linear-gradient(to right bottom, rgb(255, 216, 179), #fff)"
+            }}>
               <Typography
                 variant="h3"
                 color="inherit"
@@ -232,18 +253,21 @@ function FullWidthGrid(props) {
             </Paper>
           </Grid>
           <Grid item xs={7} sm={4}>
-            <Paper className={classes.paper}>
+            <Paper className={classes.paper}
+             style={{
+              background:"linear-gradient(to right bottom, #11998e, rgb(0, 209, 79))"
+            }}>
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 10h
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Duration
               </Typography>
@@ -275,7 +299,8 @@ function FullWidthGrid(props) {
           >
             Keep track your goods
           </Typography>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper}
+         >
             <Typography
               variant="subheading"
               color="inherit"

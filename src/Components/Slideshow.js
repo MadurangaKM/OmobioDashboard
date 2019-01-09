@@ -2,9 +2,9 @@ import React from "react";
 import { Fade } from "react-slideshow-image";
 
 const fadeImages = [
-  require("../images/slide1.jpg"),
-  require("../images/slide2.jpg"),
-  require("../images/slide3.jpg")
+  require("../images/slide1.jpg.png"),
+  require("../images/slide2.jpg.png"),
+  require("../images/slide3.jpg.png")
 ];
 
 const fadeProperties = {

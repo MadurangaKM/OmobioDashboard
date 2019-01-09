@@ -63,7 +63,7 @@ if (curHr < 12) {
           Maduranga Kodithuwakku
             </Typography>
             <Typography className={classes.title} variant="subheading"  noWrap style={{color:"#424242",height:30,marginTop:5}}>
-             Points <h1 style={{color:"#424242",float:"left",marginRight:3}}> 13000</h1>
+             Points <h1 style={{color:"rgb(173, 20, 87)",float:"left",marginRight:3}}> 13000</h1>
             </Typography>
             <Typography className={classes.title} variant="subheading"  noWrap style={{color:"#424242"}}>
             120 Points need for next level 
@@ -83,8 +83,12 @@ if (curHr < 12) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+          <ul>
+  <li>Daily JIRA Timelog</li>
+  <li>180 Days Without Warning</li>
+  <li>Recruit A Friend</li>
+  <li>Earn 120 Points</li>
+</ul> 
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -94,8 +98,12 @@ if (curHr < 12) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+          <ul>
+  <li>Daily JIRA Timelog</li>
+  <li>180 Days Without Warning</li>
+  <li>Recruit A Friend</li>
+  <li>Earn 120 Points</li>
+</ul> 
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

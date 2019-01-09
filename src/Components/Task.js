@@ -14,7 +14,8 @@ const styles = theme => ({
     marginTop: 10,
     marginLeft: 20,
     marginRight: 20,
-    backgroundColor: "#FFF1DB"
+    background:"linear-gradient(to right bottom, #FBDEB1, #FFf)"
+   
   }
 });
 
@@ -30,6 +31,7 @@ class Task extends React.Component {
             variant="h6"
             color="inherit"
             noWrap
+         
           >
             {this.props.text}
           </Typography>
