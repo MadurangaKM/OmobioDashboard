@@ -1,15 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-
-
-
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
   root: {
-    flex:1,
+    flex: 1
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -17,39 +14,32 @@ const styles = theme => ({
     marginTop: 10,
     marginLeft: 20,
     marginRight: 20,
-    backgroundColor:'#FFF1DB'
-  
-  },
-  
-
- 
-
+    backgroundColor: "#FFF1DB"
+  }
 });
 
-class Task extends React.Component{ 
-
-  render(props){
+class Task extends React.Component {
+  render(props) {
     const { classes } = this.props;
 
-  return (
-    
-    <div className={classes.root} onClick={this.props.deleteMehod}  >
-
-          <Paper className={classes.paper}  >
-         
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-         {this.props.text}
-            </Typography>
-
-          </Paper>
-          
-
-    </div>
-  );
-}
+    return (
+      <div className={classes.root} onClick={this.props.deleteMehod}>
+        <Paper className={classes.paper}>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            color="inherit"
+            noWrap
+          >
+            {this.props.text}
+          </Typography>
+        </Paper>
+      </div>
+    );
+  }
 }
 Task.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Task);
