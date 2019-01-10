@@ -7,6 +7,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 
 
 const styles = theme => ({
@@ -65,6 +67,18 @@ if (curHr < 12) {
             <Typography className={classes.title} variant="subheading"  noWrap style={{color:"#424242",height:30,marginTop:5}}>
              Points <h1 style={{color:"rgb(173, 20, 87)",float:"left",marginRight:3}}> 13000</h1>
             </Typography>
+            <Progress
+  percent={70}
+
+  status="errorr"
+  theme={{
+    errorr: {
+    
+      color: "rgb(245, 68, 67)"
+    }
+  }}
+/>
+
             <Typography className={classes.title} variant="subheading"  noWrap style={{color:"#424242"}}>
             120 Points need for next level 
             </Typography>

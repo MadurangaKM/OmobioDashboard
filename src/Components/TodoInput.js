@@ -26,7 +26,8 @@ const styles = theme => ({
   input:{
       width:'73%',
       float:'left',
-      marginRight:10
+      marginRight:10,
+      
   },
 
  

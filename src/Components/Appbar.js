@@ -21,6 +21,9 @@ import Button from '@material-ui/core/Button';
 const styles = theme => ({
   root: {
     width: '100%',
+  position: "fixed",
+    zIndex: 10,
+    
   },
   grow: {
     flexGrow: 1,
@@ -202,7 +205,7 @@ valutUrlClick(){
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{backgroundColor:"#AD1457"}}>
+        <AppBar  style={{backgroundColor:"#AD1457",marginBottom:40}}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />

@@ -12,7 +12,9 @@ import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 import IconButton from "@material-ui/core/IconButton";
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+   
+   
   },
   paper: {
     padding: theme.spacing.unit * 2,
@@ -29,13 +31,13 @@ function FullWidthGrid(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+      <Grid container spacing={2}  >
+        <Grid item xs={12} sm={6} >
           <Paper className={classes.paper}>
             <Slideshow />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} >
           <Paper className={classes.paper}>
             <Typography
               className={classes.title}
@@ -212,20 +214,20 @@ function FullWidthGrid(props) {
           <Grid item xs={7} sm={4}>
             <Paper className={classes.paper} 
             style={{
-              background:"linear-gradient(to right bottom, rgb(255, 163, 166), #fff)"
+              background:"linear-gradient(to right bottom, #642B73, #C6426E)"
             }}>
             
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#ffff" }}
               >
                 7.3
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Punch In
               </Typography>
@@ -234,19 +236,19 @@ function FullWidthGrid(props) {
           <Grid item xs={7} sm={4}>
             <Paper className={classes.paper}
             style={{
-              background:"linear-gradient(to right bottom, rgb(255, 216, 179), #fff)"
+              background:"linear-gradient(to right bottom, #FF512F, #DD2476)"
             }}>
               <Typography
                 variant="h3"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 5.30
               </Typography>
               <Typography
                 variant="subheading"
                 color="inherit"
-                style={{ color: "#424242" }}
+                style={{ color: "#fff" }}
               >
                 Punch Out
               </Typography>
@@ -321,7 +323,10 @@ function FullWidthGrid(props) {
           <Paper
             className={classes.paper}
             style={{
-              marginTop: 15
+              marginTop: 15,
+              cursor: "pointer",
+                
+            
             }}
           >
             <Typography variant="subheading" color="inherit" style={{}}>

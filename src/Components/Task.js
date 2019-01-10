@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
+
 const styles = theme => ({
   root: {
     flex: 1
@@ -14,17 +15,23 @@ const styles = theme => ({
     marginTop: 10,
     marginLeft: 20,
     marginRight: 20,
-    background:"linear-gradient(to right bottom, #FBDEB1, #FFf)"
+    background:"linear-gradient(to right bottom, #FFD494, #FFC371)"
    
   }
 });
+
 
 class Task extends React.Component {
   render(props) {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root} onClick={this.props.deleteMehod}>
+      <div className={classes.root} onClick={this.props.deleteMehod}
+      style={{
+        cursor: "pointer",
+        
+      }}>
+      
         <Paper className={classes.paper}>
           <Typography
             className={classes.title}
@@ -36,6 +43,7 @@ class Task extends React.Component {
             {this.props.text}
           </Typography>
         </Paper>
+       
       </div>
     );
   }
