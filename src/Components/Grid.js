@@ -302,9 +302,12 @@ function FullWidthGrid(props) {
             Keep track your goods
           </Typography>
           <Paper className={classes.paper}
+          style={{
+            background:"linear-gradient(to right bottom, #FFD494, #FFC371)"
+          }}
          >
             <Typography
-              variant="subheading"
+              variant="h6"
               color="inherit"
               style={{
                 textAlign: "left",

@@ -70,13 +70,15 @@ if (curHr < 12) {
             <Progress
   percent={70}
 
-  status="errorr"
+  status="errorr"  
   theme={{
     errorr: {
     
       color: "rgb(245, 68, 67)"
+     
     }
   }}
+
 />
 
             <Typography className={classes.title} variant="subheading"  noWrap style={{color:"#424242"}}>

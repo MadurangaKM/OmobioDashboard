@@ -1,126 +1,133 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Input from '@material-ui/core/Input';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Input from "@material-ui/core/Input";
 import AddBtn from "./AddBtn";
-import Task from "./Task"
-import  '../style.css';
-import FlipMove from 'react-flip-move';
-
-
-
+import Task from "./Task";
+import "../style.css";
+import FlipMove from "react-flip-move";
+import { connect } from "react-redux";
 
 const styles = theme => ({
   root: {
-    flex:1,
+    flex: 1
   },
   paper: {
     padding: theme.spacing.unit * 2,
     color: theme.palette.text.secondary,
     marginTop: 30,
     marginLeft: 20,
-    marginRight: 20,
-  
+    marginRight: 20
   },
-  input:{
-      width:'73%',
-      float:'left',
-      marginRight:10,
-      
-  },
-
- 
-
+  input: {
+    width: "73%",
+    float: "left",
+    marginRight: 10
+  }
 });
 
-class TodoInput extends React.Component{
-  constructor(props){
+class TodoInput extends React.Component {
+  constructor(props) {
     super(props);
 
-    this.state={
-        noteText: '',
-        note:[]
+    this.state = {
+      id: "",
+      content: ""
+    };
+  }
+
+  deleteNote(index) {
+    console.log(index);
+
+    this.props.deleteTask(index);
+  }
+
+  handleChange = e => {
+    this.setState({
+      id: Math.random(),
+      content: e.target.value
+    });
+  };
+  addTodo = e => {
+    e.preventDefault();
+    console.log(this.state);
+    this.props.AddTask(this.state);
+
+    this.setState({ content: "" });
+  };
+  handleKeyPress = event => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      this.props.AddTask(this.state);
+      this.setState({ content: "" });
     }
-    this.updateNoteText=this.updateNoteText.bind(this)
-    this.addNote=this.addNote.bind(this)
-    this.handleKeyPress=this.handleKeyPress.bind(this)
-    this.deleteNote=this.deleteNote.bind(this)
-}
-updateNoteText(noteText){
-  this.setState({noteText:noteText.target.value})
-}
+  };
+  render(props) {
+    let tasks = this.props.todos.map(todos => {
+      return (
+        <Task
+          key={todos.id}
+          text={todos.content}
+          deleteMehod={() => this.deleteNote(todos.id)}
+        />
+      );
+    });
+    console.log("Here is my" + tasks);
+    console.log(this.props);
 
-addNote(){
-  if(this.state.noteText===''){return false}
-  let noteArr = this.state.note;
-  noteArr.push(this.state.noteText);
-  this.setState({noteText:''});
-  this.textInput.focus();
-  console.log(noteArr)
-}
-handleKeyPress = (event) =>{
-  if(event.key==='Enter'){
-    let noteArr = this.state.note;
-  noteArr.push(this.state.noteText);
-  this.setState({noteText:''});
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
+          <div id="inputtext">
+            <Input
+              inputRef={input => {
+                this.textInput = input;
+              }}
+              value={this.state.content}
+              onChange={this.handleChange}
+              onKeyPress={this.handleKeyPress.bind(this)}
+              placeholder="Enter your task"
+              fullWidth="true"
+              className={classes.input}
+              inputProps={{
+                "aria-label": "Description"
+              }}
+            />{" "}
+          </div>
 
+          <AddBtn className={classes.Add} onClick={this.addTodo} />
+        </Paper>
+        <FlipMove duration={500} easing="ease-out">
+          {tasks}
+        </FlipMove>
+      </div>
+    );
   }
 }
-deleteNote(index){
-  let noteArr = this.state.note;
-  noteArr.splice(index,1);
-  this.setState({notes: noteArr})
-  console.log("deleted")
-}
- 
-
-  render(props){
-
-    let notes= this.state.note.map((val,key) => {
-      return <Task key ={key} text={val}
-      deleteMehod={()=> this.deleteNote(key)} />
-    })
-    console.log("Here is my"+notes)
-    const { classes } = this.props;
-  return (
-    
-    <div className={classes.root}>
-
-          <Paper className={classes.paper}>
-         
-          <div id="inputtext">
-
-          <Input
-
-        inputRef ={((input) => {this.textInput = input})}
-        value={this.state.noteText}
-        onChange={noteText => this.updateNoteText(noteText)}
-        onKeyPress={this.handleKeyPress.bind(this)}
-        placeholder="Enter your task"
-        fullWidth="true"
-        className={classes.input}
-        inputProps={{
-          'aria-label': 'Description',
-        }}
-      />          </div>
-
-     
-    
-   <AddBtn 
-    className={classes.Add}
-    onClick={this.addNote}
-    />
-          </Paper>
-          <FlipMove duration={500} easing="ease-out">
-        {notes}
-        </FlipMove>
-    </div>
-  );
-}
-}
 TodoInput.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(TodoInput);
+const mapStatetoProps = state => {
+  return {
+    todos: state.todos
+  };
+};
+
+const mapDisparchToProps = dispatch => {
+  return {
+    deleteTask: id => {
+      dispatch({ type: "DELETE_TASK", id: id });
+    },
+    AddTask: task => {
+      console.log("dispatch" + task);
+      dispatch({ type: "ADD_TASK", task });
+    }
+  };
+};
+export default connect(
+  mapStatetoProps,
+  mapDisparchToProps
+)(withStyles(styles)(TodoInput));
