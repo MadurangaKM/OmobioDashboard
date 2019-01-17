@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import History from "./History";
+//import History from "./History";
 
 const styles = theme => ({
   root: {

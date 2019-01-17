@@ -50,6 +50,7 @@ class TodoInput extends React.Component {
     });
   };
   addTodo = e => {
+    if(this.state.content===''){return false}
     e.preventDefault();
     console.log(this.state);
     this.props.AddTask(this.state);
@@ -58,6 +59,7 @@ class TodoInput extends React.Component {
   };
   handleKeyPress = event => {
     if (event.key === "Enter") {
+      if(this.state.content===''){return false}
       event.preventDefault();
       this.props.AddTask(this.state);
       this.setState({ content: "" });
